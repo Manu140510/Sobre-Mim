@@ -1,0 +1,131 @@
+/* Importando fontes */
+@import url('https://fonts.googleapis.com/css2?family=Poiret+One&family=Raleway:wght@300;500&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: linear-gradient(135deg, #1a001f, #3b0a45, #2a0033);
+  color: #f1e6ff;
+  font-family: 'Raleway', sans-serif;
+  line-height: 1.6;
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+}
+
+.container {
+  max-width: 800px;
+  background: rgba(50, 0, 70, 0.6);
+  border-radius: 20px;
+  padding: 30px;
+  box-shadow: 0 0 25px rgba(180, 120, 255, 0.4);
+  backdrop-filter: blur(5px);
+}
+
+header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+header img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #b37bff;
+  box-shadow: 0 0 20px #8a2be2;
+  margin-bottom: 10px;
+}
+
+header h1 {
+  font-family: 'Poiret One', cursive;
+  font-size: 2.5rem;
+  color: #cda8ff;
+  margin-bottom: 5px;
+}
+
+header h2 {
+  font-size: 1.3rem;
+  color: #d7bdfc;
+  font-weight: 300;
+}
+
+section {
+  margin-top: 20px;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 15px;
+  position: relative;
+  overflow: hidden;
+}
+
+section h3 {
+  font-size: 1.6rem;
+  margin-bottom: 10px;
+  color: #e2ccff;
+  text-shadow: 0 0 5px #6a1b9a;
+}
+
+section p {
+  font-size: 1.1rem;
+  margin-bottom: 10px;
+}
+
+ul {
+  list-style: none;
+  padding-left: 10px;
+}
+
+ul li::before {
+  content: "🦋 ";
+  color: #a875ff;
+}
+
+/* Borboletas animadas */
+.butterfly {
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/0/0c/Blue_morpho_butterfly.png/800px-Blue_morpho_butterfly.png');
+  background-size: cover;
+  opacity: 0.2;
+  animation: fly 20s linear infinite;
+}
+
+.butterfly:nth-child(1) {
+  top: 20%;
+  left: -60px;
+  animation-delay: 0s;
+}
+
+.butterfly:nth-child(2) {
+  top: 50%;
+  left: -100px;
+  animation-delay: 5s;
+}
+
+.butterfly:nth-child(3) {
+  top: 70%;
+  left: -80px;
+  animation-delay: 10s;
+}
+
+@keyframes fly {
+  0% { transform: translateX(0) translateY(0) rotate(0deg); }
+  50% { transform: translateX(100vw) translateY(-100px) rotate(180deg); }
+  100% { transform: translateX(0) translateY(0) rotate(360deg); }
+}
+
+/* Responsivo */
+@media (max-width: 600px) {
+  header h1 {
+    font-size: 2rem;
+  }
+  section p, ul li {
+    font-size: 1rem;
+  }
+}
